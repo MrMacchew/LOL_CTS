@@ -1,0 +1,41 @@
+{% load bootstrap4 %}
+
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+{% bootstrap_messages %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h1>Summoner Splash Page</h1>
+<div class="container">
+    <table class="table">
+        <tr>
+            <td>
+                Summoner
+            </td>
+            <td>
+                Kills
+            </td>
+            <td>
+                Deaths
+            </td>
+            <td>
+                Pushups Owed
+            </td>
+            <td>
+                Pushups Completed
+            </td>
+        </tr>
+        {% for player in player_list %}
+        <tr>
+            <td>{{ player.name }}</td>
+            <td>{{ player.kills }}</td>
+            <td>{{ player.deaths }}</td>
+            <td>{{ player.pushups }}</td>
+            <td>{{ player.pushups_done }}</td>
+        </tr>
+        {% endfor %}
+    
+    </table>
+</div>
