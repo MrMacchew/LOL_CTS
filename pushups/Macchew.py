@@ -5,7 +5,7 @@ import os
 from LOL_CTS.settings import BASE_DIR
 
 end_time = int(time.time()*1000)
-start_time = end_time - 604800000
+start_time = end_time - 259200000
 api_file = open(os.path.join(BASE_DIR, "Lol_CTS\\api_key.txt"), "r")
 
 api_key = api_file.read()

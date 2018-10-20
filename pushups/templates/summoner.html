@@ -8,6 +8,7 @@
     <div class="row">
         <div class="col-md-6 offset-md-3">
             <h1>Summoner Splash Page</h1>
+            <div>Games as of 10/18/2018</div>
 <div class="container">
     <table class="table">
         <tr>
@@ -30,9 +31,9 @@
         {% for player in player_list %}
         <tr>
             <td>{{ player.name }}</td>
-            <td>{{ player.kills }}</td>
-            <td>{{ player.deaths }}</td>
-            <td>{{ player.pushups }}</td>
+            <td>{{ player.GetKills }}</td>
+            <td>{{ player.GetDeaths }}</td>
+            <td>{{ player.GetPushups }}</td>
             <td>{{ player.pushups_done }}</td>
         </tr>
         {% endfor %}

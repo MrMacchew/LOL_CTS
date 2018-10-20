@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load bootstrap4 %}
+
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+{% bootstrap_messages %}
+{% block content %}
+
+<div class="container">
+    <div class="card col-xs-12 col-md-offset-4 col-md 4">
+        <h1 class="display-2">
+            Login
+        </h1>
+        <form method="POST" action=".">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Login" />
+        </form>
+    </div>
+</div>
+{% endblock %}

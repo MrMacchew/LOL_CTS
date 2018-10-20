@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container-fluid">
+                <h1>League Pushup page</h1>
+            </div>
+        </div>
+        <div class="row">
+            {% for player in player_list %}
+            <div class="col-xs-12 col-md-4">
+                <div class="card">
+                    {{ player.name }}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
